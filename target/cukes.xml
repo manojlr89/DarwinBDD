@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.141">
-    <testcase classname="Verify login functionality" name="Verify user able to login with valid credentials" time="24.935">
-        <failure message="expected:&lt;https://[demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal].com/login&gt; but was:&lt;https://[accounts.loginradius.com/auth.aspx?return_url=https://adminconsole.loginradius].com/login&gt;" type="org.junit.ComparisonFailure">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.862">
+    <testcase classname="Verify login functionality" name="Verify user able to login with valid credentials" time="25.647">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=84.0.4147.105)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LRIN-QA-03', ip: '192.168.43.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\MANOJS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 8f7f419b76fec2abd86e9d8d3cf12548&#10;*** Element info: {Using=id, value=loginradius-login-emailid}" type="org.openqa.selenium.NoSuchWindowException">
             <![CDATA[Given Go to hosted page.....................................................failed
 When Enter valid email and password.........................................skipped
 And Click login button......................................................skipped
 Then Dashboard should show..................................................skipped
 
 StackTrace:
-org.junit.ComparisonFailure: expected:<https://[demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal].com/login> but was:<https://[accounts.loginradius.com/auth.aspx?return_url=https://adminconsole.loginradius].com/login>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at utilities.TestBase.OpenBrowser(TestBase.java:42)
-	at stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:15)
-	at ✽.Go to hosted page(file:///C:/Users/ManojSignh/eclipse-workspace/uiAutomation/src/test/resources/features/loginss.feature:23)
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.105)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LRIN-QA-03', ip: '192.168.43.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\MANOJS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8f7f419b76fec2abd86e9d8d3cf12548
+*** Element info: {Using=id, value=loginradius-login-emailid}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at utilities.TestBase.OpenBrowser(TestBase.java:53)
+	at stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:16)
+	at ✽.Go to hosted page(file:///C:/Users/ManojSignh/Documents/DarwinBDD/src/test/resources/features/loginss.feature:23)
 ]]>
         </failure>
     </testcase>

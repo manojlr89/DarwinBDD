@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2020-08-11T11:30:26.936Z",
+        "start_timestamp": "2020-08-12T16:45:27.129Z",
         "line": 22,
         "name": "Verify user able to login with valid credentials",
         "description": "",
@@ -13,8 +13,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003chttps://[demotesting.devhub.lrinternal.com/auth.aspx?return_url\u003dhttps://devadmin-console.lrinternal].com/login\u003e but was:\u003chttps://[accounts.loginradius.com/auth.aspx?return_url\u003dhttps://adminconsole.loginradius].com/login\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat utilities.TestBase.OpenBrowser(TestBase.java:42)\r\n\tat stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:15)\r\n\tat ✽.Go to hosted page(file:///C:/Users/ManojSignh/eclipse-workspace/uiAutomation/src/test/resources/features/loginss.feature:23)\r\n",
-              "duration": 24847135000,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d84.0.4147.105)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LRIN-QA-03\u0027, ip: \u0027192.168.43.114\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002713.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\\Users\\MANOJS~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:53649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 8f7f419b76fec2abd86e9d8d3cf12548\n*** Element info: {Using\u003did, value\u003dloginradius-login-emailid}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat utilities.TestBase.OpenBrowser(TestBase.java:53)\r\n\tat stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:16)\r\n\tat ✽.Go to hosted page(file:///C:/Users/ManojSignh/Documents/DarwinBDD/src/test/resources/features/loginss.feature:23)\r\n",
+              "duration": 25558078100,
               "status": "failed"
             },
             "line": 23,
@@ -26,6 +26,7 @@
           },
           {
             "result": {
+              "duration": 997400,
               "status": "skipped"
             },
             "line": 24,
@@ -37,7 +38,7 @@
           },
           {
             "result": {
-              "duration": 997200,
+              "duration": 997700,
               "status": "skipped"
             },
             "line": 25,
@@ -49,7 +50,6 @@
           },
           {
             "result": {
-              "duration": 996900,
               "status": "skipped"
             },
             "line": 26,

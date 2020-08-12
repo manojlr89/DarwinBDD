@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.141">
+    <testcase classname="Verify login functionality" name="Verify user able to login with valid credentials" time="24.935">
+        <failure message="expected:&lt;https://[demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal].com/login&gt; but was:&lt;https://[accounts.loginradius.com/auth.aspx?return_url=https://adminconsole.loginradius].com/login&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given Go to hosted page.....................................................failed
+When Enter valid email and password.........................................skipped
+And Click login button......................................................skipped
+Then Dashboard should show..................................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<https://[demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal].com/login> but was:<https://[accounts.loginradius.com/auth.aspx?return_url=https://adminconsole.loginradius].com/login>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at utilities.TestBase.OpenBrowser(TestBase.java:42)
+	at stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:15)
+	at ✽.Go to hosted page(file:///C:/Users/ManojSignh/eclipse-workspace/uiAutomation/src/test/resources/features/loginss.feature:23)
+]]>
+        </failure>
+    </testcase>
+</testsuite>

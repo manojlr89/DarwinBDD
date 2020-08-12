@@ -1,0 +1,72 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-11T11:30:26.936Z",
+        "line": 22,
+        "name": "Verify user able to login with valid credentials",
+        "description": "",
+        "id": "verify-login-functionality;verify-user-able-to-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003chttps://[demotesting.devhub.lrinternal.com/auth.aspx?return_url\u003dhttps://devadmin-console.lrinternal].com/login\u003e but was:\u003chttps://[accounts.loginradius.com/auth.aspx?return_url\u003dhttps://adminconsole.loginradius].com/login\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat utilities.TestBase.OpenBrowser(TestBase.java:42)\r\n\tat stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:15)\r\n\tat ✽.Go to hosted page(file:///C:/Users/ManojSignh/eclipse-workspace/uiAutomation/src/test/resources/features/loginss.feature:23)\r\n",
+              "duration": 24847135000,
+              "status": "failed"
+            },
+            "line": 23,
+            "name": "Go to hosted page",
+            "match": {
+              "location": "stepDefinitions.LoginSteps.go_to_hosted_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "Enter valid email and password",
+            "match": {
+              "location": "stepDefinitions.LoginSteps.enter_valid_email_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 997200,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "Click login button",
+            "match": {
+              "location": "stepDefinitions.LoginSteps.click_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 996900,
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "Dashboard should show",
+            "match": {
+              "location": "stepDefinitions.LoginSteps.dashboard_should_show()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify login functionality",
+    "description": "",
+    "id": "verify-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/loginss.feature",
+    "tags": []
+  }
+]

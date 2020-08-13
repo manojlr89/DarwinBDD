@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import testRunner.TestRunner;
 
@@ -33,8 +34,8 @@ public class TestBase {
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-			driver = new ChromeDriver();
+			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
+			driver = new FirefoxDriver();
 			break;
 		default:
 			break;

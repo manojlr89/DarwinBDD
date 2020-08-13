@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		"pretty", "html:target/cucumber" })
 public class TestRunner {
 
-	public String browser = "chrome";
+	public String browser = "firefox";
 	public String env = "dev";
 	public String plan = "free";
 }

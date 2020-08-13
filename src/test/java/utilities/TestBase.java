@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import testRunner.TestRunner;
 
 public class TestBase {	
@@ -30,11 +31,11 @@ public class TestBase {
 		switch (browser) {
 
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();			
 			driver = new FirefoxDriver();
 			break;
 		default:

@@ -1,5 +1,10 @@
 package stepDefinitions;
 
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+
 import customCommand.loginCommand;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,19 +19,25 @@ public class LoginSteps extends TestBase{
 	public void go_to_hosted_page() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 		TestBase.OpenBrowser();	
-		loginCommand.Login();
+		
 	}
 
 	@When("Enter valid email and password")
-	public void enter_valid_email_and_password() {
+	public void enter_valid_email_and_password() throws Exception {
 		
 		
 	   
 	}
 
 	@And("Click login button")
-	public void click_login_button() {
-		
+	public void click_login_button() throws Exception {
+		String url;
+		loginCommand.Login();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(By.id("loginradius-login-emailid"));
+		url = driver.getCurrentUrl();
+		Assert.assertEquals(url,
+				"https://demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal.com/login");
 	}
 
 	@Then("Dashboard should show")

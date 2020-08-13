@@ -16,18 +16,14 @@ public class loginCommand extends TestBase {
 	public static TestRunner runner = new TestRunner();
 	static String plan = runner.plan;
 	public static void Login() throws Exception {			
-
+		FileInputStream dev = new FileInputStream("src/test/java/config/dev.properties");
+		prop.load(dev);
 		switch (plan) {
-
-		case "free":
-			FileInputStream free = new FileInputStream("src/test/java/config/dev.properties");
-			prop.load(free);
+		case "free":			
 			login.credential(prop.getProperty("free_dev_Email"), prop.getProperty("free_dev_Password"));
 			login.clickLogin();
 			break;
-		case "dev":
-			FileInputStream dev = new FileInputStream("src/test/java/config/dev.properties");
-			prop.load(dev);
+		case "dev":			
 			login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
 			login.clickLogin();
 			break;

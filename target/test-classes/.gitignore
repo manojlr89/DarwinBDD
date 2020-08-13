@@ -1,6 +1,4 @@
-/customCommand/
-/stepDefinitions/
-/utilities/
 /testRunner/
-/pages/
+/customCommand/
+/utilities/
 /config/

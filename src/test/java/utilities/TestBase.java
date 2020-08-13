@@ -20,21 +20,26 @@ public class TestBase {
 	public static void OpenBrowser() throws Exception {
 
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("src/test/java/config/config.properties");
+		FileInputStream fis = new FileInputStream("src/test/java/config/env.properties");
 		prop.load(fis);
 		String browser = runner.browser;
 		String env = runner.env;
 		String url;
+		
 		switch (browser) {
 
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 			break;
-
+		case "firefox":
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+			driver = new ChromeDriver();
+			break;
 		default:
 			break;
 		}
+		
 		switch (env) {
 
 		case "dev":

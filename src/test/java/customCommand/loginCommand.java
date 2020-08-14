@@ -13,25 +13,25 @@ import utilities.TestBase;
 
 public class loginCommand extends TestBase {
 	public static LoginPage login = new LoginPage();
-	public static TestRunner runner = new TestRunner();
-	static String plan = runner.plan;
-	public static void Login() throws Exception {			
+
+	public static void Login() throws Exception {
+		String plan = System.getProperty("plan");
 		FileInputStream dev = new FileInputStream("src/test/java/config/dev.properties");
 		prop.load(dev);
 		switch (plan) {
-		case "free":			
+		default:
+			// Running free plan user
 			login.credential(prop.getProperty("free_dev_Email"), prop.getProperty("free_dev_Password"));
 			login.clickLogin();
 			break;
-		case "dev":			
+		case "dev": // Running dev plan user
 			login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
 			login.clickLogin();
 			break;
-
-		default:
+		case "devPremium":
+			login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
+			login.clickLogin();
 			break;
-		}	
-
+		}
 	}
-
 }

@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 import customCommand.loginCommand;
 import io.cucumber.java.en.And;
@@ -14,17 +15,15 @@ import pages.LoginPage;
 import utilities.TestBase;
 
 public class LoginSteps extends TestBase{
-	
+
 	@Given("Go to hosted page")
 	public void go_to_hosted_page() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
-		TestBase.OpenBrowser();	
-		
+		TestBase.OpenBrowser();			
 	}
 
 	@When("Enter valid email and password")
-	public void enter_valid_email_and_password() throws Exception {
-		
+	public void enter_valid_email_and_password() throws Exception {		
 		
 	   
 	}

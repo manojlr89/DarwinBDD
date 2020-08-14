@@ -50,10 +50,17 @@
 			<artifactId>cucumber-plugin</artifactId>
 			<version>6.3.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
+			<artifactId>cucumber-testng</artifactId>
 			<version>6.3.0</version>
 		</dependency>
 
@@ -77,19 +84,12 @@
 			<artifactId>cucumber-java8</artifactId>
 			<version>6.3.0</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>4.1.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-chrome-driver</artifactId>
-    <version>3.141.59</version>
-</dependency>
-
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -129,6 +129,7 @@
 							<outputDirectory>target/reports/advanced-reports</outputDirectory>
 							<cucumberOutput>target/reports/cucumber.json</cucumberOutput>
 							<buildNumber>1</buildNumber>
+							<enableFlashCharts>true</enableFlashCharts>
 							<parallelTesting>false</parallelTesting>
 							<skip>false</skip>
 							<!-- optional, defaults to outputDirectory if not specified -->

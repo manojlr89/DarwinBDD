@@ -12,39 +12,35 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import testRunner.TestRunner;
 
-public class TestBase {	
+public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
-	public static TestRunner runner = new TestRunner();
 
 	public static void OpenBrowser() throws Exception {
 
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("src/test/java/config/env.properties");
 		prop.load(fis);
-		String browser = runner.browser;
-		String env = runner.env;
+		String browser = System.getProperty("browser");
+		String env = System.getProperty("env");
+		// String browser1 = runner.browser;
+		// String env = runner.env;
 		String url;
-		
-		switch (browser) {
 
-		case "chrome":
+		switch (browser) {
+		default:
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
-			WebDriverManager.firefoxdriver().setup();			
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			break;
-		default:
-			break;
 		}
-		
-		switch (env) {
 
-		case "dev":
+		switch (env) {
+		default:
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty("devurl"));
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -62,11 +58,6 @@ public class TestBase {
 			Assert.assertEquals(url,
 					"https://stagingaccounts.lrinternal.com/auth.aspx?return_url=https://stagingadmin-console.lrinternal.com/login");
 			break;
-
-		default:
-			break;
 		}
-
 	}
-
 }

@@ -1,5 +1,5 @@
+utilities\TestBase.class
 stepDefinitions\LoginSteps.class
 pages\LoginPage.class
 testRunner\TestRunner.class
-utilities\TestBase.class
 customCommand\loginCommand.class

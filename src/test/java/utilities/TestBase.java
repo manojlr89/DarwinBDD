@@ -20,8 +20,8 @@ public class TestBase {
 	public static Properties prop;
 
 	@Parameters("browser")
-	
-	@BeforeMethod 
+
+	@BeforeMethod
 	public static void OpenBrowser() throws Exception {
 
 		prop = new Properties();
@@ -29,23 +29,20 @@ public class TestBase {
 		prop.load(fis);
 		String browser = System.getProperty("browser");
 		String env = System.getProperty("env");
-		// String browser1 = runner.browser;
-		// String env = runner.env;
 		String url;
-
-		switch (browser) {
-		default:
+		if (browser == null) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			break;
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-			break;
+		} else {
+			switch (browser) {
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				break;
+			}
 		}
 
-		switch (env) {
-		default:
+		if (env == null) {
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty("devurl"));
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -53,16 +50,18 @@ public class TestBase {
 			url = driver.getCurrentUrl();
 			Assert.assertEquals(url,
 					"https://demotesting.devhub.lrinternal.com/auth.aspx?return_url=https://devadmin-console.lrinternal.com/login");
-			break;
-		case "stag":
-			driver.manage().window().maximize();
-			driver.get(prop.getProperty("stagurl"));
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			driver.findElement(By.id("loginradius-login-emailid"));
-			url = driver.getCurrentUrl();
-			Assert.assertEquals(url,
-					"https://stagingaccounts.lrinternal.com/auth.aspx?return_url=https://stagingadmin-console.lrinternal.com/login");
-			break;
+		} else {
+			switch (env) {
+			case "stag":
+				driver.manage().window().maximize();
+				driver.get(prop.getProperty("stagurl"));
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.findElement(By.id("loginradius-login-emailid"));
+				url = driver.getCurrentUrl();
+				Assert.assertEquals(url,
+						"https://stagingaccounts.lrinternal.com/auth.aspx?return_url=https://stagingadmin-console.lrinternal.com/login");
+				break;
+			}
 		}
 	}
 }

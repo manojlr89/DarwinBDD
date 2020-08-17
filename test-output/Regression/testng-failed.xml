@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
-  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+<suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="firefoxddd(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="testRunner.TestRunner">
         <methods>
@@ -11,5 +12,5 @@
         </methods>
       </class> <!-- testRunner.TestRunner -->
     </classes>
-  </test> <!-- Surefire test(failed) -->
-</suite> <!-- Failed suite [Surefire suite] -->
+  </test> <!-- firefoxddd(failed) -->
+</suite> <!-- Failed suite [Regression] -->

@@ -18,20 +18,21 @@ public class loginCommand extends TestBase {
 		String plan = System.getProperty("plan");
 		FileInputStream dev = new FileInputStream("src/test/java/config/dev.properties");
 		prop.load(dev);
-		switch (plan) {
-		default:
+		if (plan == null) {
 			// Running free plan user
 			login.credential(prop.getProperty("free_dev_Email"), prop.getProperty("free_dev_Password"));
 			login.clickLogin();
-			break;
-		case "dev": // Running dev plan user
-			login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
-			login.clickLogin();
-			break;
-		case "devPremium":
-			login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
-			login.clickLogin();
-			break;
+		} else {
+			switch (plan) {
+			case "dev": // Running dev plan user
+				login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
+				login.clickLogin();
+				break;
+			case "devPremium":
+				login.credential(prop.getProperty("dev_dev_Email"), prop.getProperty("dev_dev_Password"));
+				login.clickLogin();
+				break;
+			}
 		}
 	}
 }

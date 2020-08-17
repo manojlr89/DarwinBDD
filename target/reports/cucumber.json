@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2020-08-14T12:04:06.816Z",
+        "start_timestamp": "2020-08-17T11:19:52.714Z",
         "line": 22,
         "name": "Verify user able to login with valid credentials",
         "description": "",
@@ -13,8 +13,9 @@
         "steps": [
           {
             "result": {
-              "duration": 20833308700,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat utilities.TestBase.OpenBrowser(TestBase.java:47)\r\n\tat stepDefinitions.LoginSteps.go_to_hosted_page(LoginSteps.java:22)\r\n\tat ✽.Go to hosted page(file:///C:/Users/ManojSignh/Documents/DarwinBDD/src/test/resources/features/loginss.feature:23)\r\n",
+              "duration": 7333252800,
+              "status": "failed"
             },
             "line": 23,
             "name": "Go to hosted page",
@@ -25,7 +26,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 24,
             "name": "Enter valid email and password",
@@ -36,8 +37,7 @@
           },
           {
             "result": {
-              "duration": 526108300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 25,
             "name": "Click login button",
@@ -48,8 +48,8 @@
           },
           {
             "result": {
-              "duration": 1000200,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 26,
             "name": "Dashboard should show",

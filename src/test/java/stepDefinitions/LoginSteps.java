@@ -15,7 +15,7 @@ import pages.LoginPage;
 import utilities.TestBase;
 
 public class LoginSteps extends TestBase{
-
+    @Test
 	@Given("Go to hosted page")
 	public void go_to_hosted_page() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions

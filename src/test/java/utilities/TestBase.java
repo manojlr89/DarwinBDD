@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,6 +19,9 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 
+	@Parameters("browser")
+	
+	@BeforeMethod 
 	public static void OpenBrowser() throws Exception {
 
 		prop = new Properties();

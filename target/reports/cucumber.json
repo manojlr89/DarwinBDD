@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2020-08-17T15:42:37.019Z",
+        "start_timestamp": "2020-08-18T09:04:38.642Z",
         "line": 22,
         "name": "Verify user able to login with valid credentials",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 70620358000,
+              "duration": 22245850300,
               "status": "passed"
             },
             "line": 23,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 997500,
+              "duration": 257826700,
               "status": "passed"
             },
             "line": 24,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 969806800,
+              "duration": 20944600,
               "status": "passed"
             },
             "line": 25,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 998100,
+              "duration": 995300,
               "status": "passed"
             },
             "line": 26,

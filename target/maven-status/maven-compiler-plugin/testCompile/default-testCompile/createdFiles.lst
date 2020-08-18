@@ -2,4 +2,3 @@ utilities\TestBase.class
 stepDefinitions\LoginSteps.class
 pages\LoginPage.class
 testRunner\TestRunner.class
-customCommand\loginCommand.class
